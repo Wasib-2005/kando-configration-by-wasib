@@ -1,0 +1,540 @@
+{
+  "version": "3.0.0",
+  "menu": {
+    "root": {
+      "name": "DefaultMenu",
+      "icon": "apps",
+      "iconTheme": "material-symbols-rounded",
+      "type": "root",
+      "activateWorkflow": {
+        "quickSelectKey": "Space",
+        "actions": [
+          {
+            "type": "close-menu"
+          }
+        ]
+      },
+      "children": [
+        {
+          "name": "Brightness Audio Mic",
+          "icon": "brightness_mic_speaker.svg",
+          "iconTheme": "some-icon-theme",
+          "type": "submenu",
+          "openWorkflow": {
+            "quickSelectKey": "A",
+            "actions": []
+          },
+          "activateWorkflow": {
+            "quickSelectKey": "Backspace",
+            "actions": [
+              {
+                "type": "close-submenu"
+              }
+            ]
+          },
+          "children": [
+            {
+              "name": "Brightness",
+              "icon": "brightness.svg",
+              "iconTheme": "some-icon-theme",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Execute Command",
+              "icon": "speaker.svg",
+              "iconTheme": "some-icon-theme",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Execute Command",
+              "icon": "mic.svg",
+              "iconTheme": "some-icon-theme",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "App List",
+          "icon": "menu",
+          "iconTheme": "material-symbols-rounded",
+          "type": "submenu",
+          "activateWorkflow": {
+            "quickSelectKey": "Backspace",
+            "actions": [
+              {
+                "type": "close-submenu"
+              }
+            ]
+          },
+          "children": [
+            {
+              "name": "VS Code",
+              "icon": "icons8-visual-studio-code-96.png",
+              "iconTheme": "some-icon-theme",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "code",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Konsole",
+              "icon": "command-item.svg",
+              "iconTheme": "kando",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "konsole",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Firefox",
+              "icon": "firefoxbrowser",
+              "iconTheme": "simple-icons",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "firefox",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Settings",
+              "icon": "settings",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "systemsettings",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Bruno",
+              "icon": "bruno.svg",
+              "iconTheme": "some-icon-theme",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "flatpak run com.usebruno.Bruno",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Submenu",
+          "icon": "uri-item.svg",
+          "iconTheme": "kando",
+          "type": "submenu",
+          "activateWorkflow": {
+            "quickSelectKey": "Backspace",
+            "actions": [
+              {
+                "type": "close-submenu"
+              }
+            ]
+          },
+          "children": [
+            {
+              "name": "Open URI",
+              "icon": "googlegemini",
+              "iconTheme": "simple-icons",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "open-uri",
+                    "uri": "https://gemini.google.com/"
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Open URI",
+              "icon": "figma",
+              "iconTheme": "simple-icons",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "open-uri",
+                    "uri": "https://www.figma.com"
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Open URI",
+              "icon": "github",
+              "iconTheme": "simple-icons",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "open-uri",
+                    "uri": "https://github.com/"
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Open URI",
+              "icon": "whatsapp",
+              "iconTheme": "simple-icons",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "open-uri",
+                    "uri": "https://web.whatsapp.com/"
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "name": "Change Wallpaper",
+          "icon": "icons8-wallpaper-100.png",
+          "iconTheme": "some-icon-theme",
+          "selectWorkflow": {
+            "actions": [
+              {
+                "type": "execute-command",
+                "command": "wallpaper  --now",
+                "detached": true,
+                "isolated": false
+              },
+              {
+                "type": "close-menu"
+              }
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "name": "Protonvpn",
+          "icon": "proton.png",
+          "iconTheme": "some-icon-theme",
+          "selectWorkflow": {
+            "actions": [
+              {
+                "type": "execute-command",
+                "command": "protonvpn connect",
+                "detached": true,
+                "isolated": false
+              },
+              {
+                "type": "close-menu"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Folder",
+          "icon": "file-item.svg",
+          "iconTheme": "kando",
+          "type": "submenu",
+          "activateWorkflow": {
+            "quickSelectKey": "Backspace",
+            "actions": [
+              {
+                "type": "close-submenu"
+              }
+            ]
+          },
+          "children": [
+            {
+              "name": "Downloads",
+              "icon": "download",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "open-file",
+                    "path": "/home/$USER/Downloads/"
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Documents",
+              "icon": "text_ad",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "quickSelectKey": "O",
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "/home/$USER/DOCUMENTS",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Projects",
+              "icon": "projects.png",
+              "iconTheme": "some-icon-theme",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "open-file",
+                    "path": "/mnt/server/Projects/"
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Home",
+              "icon": "home",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "open-file",
+                    "path": "/home/$USER/"
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "icon": "power_settings_new",
+          "iconTheme": "material-symbols-rounded",
+          "type": "submenu",
+          "activateWorkflow": {
+            "quickSelectKey": "Backspace",
+            "actions": [
+              {
+                "type": "close-submenu"
+              }
+            ]
+          },
+          "children": [
+            {
+              "name": "Poweroff",
+              "icon": "power_settings_new",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "kdialog --warningyesno \"Are you sure you want to power off?\" --title \"Power Off\" && systemctl poweroff",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Reboot",
+              "icon": "restart_alt",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "kdialog --warningyesno \"Are you sure you want to reboot?\" --title \"Reboot\" && systemctl reboot",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Sleep",
+              "icon": "moon_stars",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "systemctl suspend",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Lock",
+              "icon": "lock",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "loginctl lock-session",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Logout",
+              "icon": "login",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "qdbus org.kde.Shutdown /Shutdown logout",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "shortcut": "",
+    "shortcutID": "DefaultMenu",
+    "useFixedPosition": false,
+    "fixedMenuPosition": {
+      "x": 1,
+      "y": 0
+    },
+    "anchored": false,
+    "hoverMode": false,
+    "conditions": {},
+    "tags": []
+  }
+}
